@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cafe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=(내 API 키 입력)&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <h1 class="logo" onclick="location.reload()">My Cafe</h1>
+                    <div class="hamburger" id="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+                <ul id="nav-list">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                </ul>
+                <div class="profile">
+                    <button id="profile-button"><i class="fas fa-user"></i></button>
+                    <div id="profile-menu" class="profile-menu">
+                        <a href="#">Sign Up</a>
+                        <a href="#">Log In</a>
+                        <a href="#">Log Out</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="confirmation" class="confirmation"></div>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="image/banner1.jpg" alt="Cafe Image 1"></div>
+            <div class="slide"><img src="(배너 2 넣기)" alt="Cafe Image 2"></div>
+            <div class="slide"><img src="(배너 3 넣기)" alt="Cafe Image 3"></div>
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <section id="about" class="hidden">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>나만의 카페를 소개하는 소개란입니다.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="hidden">
+        <div class="container">
+            <h2>Menu</h2>
+            <ul>
+                <li>에스프레소 - 3,000원</li>
+                <li>라떼 - 4,000원</li>
+                <li>카푸치노 - 4,500원</li>
+                <li>차 - 2,500원</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="hidden">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="image/image1.jpg" alt="Gallery Image 1">
+                <img src="image/image2.jpg" alt="Gallery Image 2">
+                <img src="image/image3.jpg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="hidden">
+        <div class="container">
+            <h2>Reviews</h2>
+            <div class="reviews">
+                <div class="review">
+                    <p>"이곳은 고객들의 리뷰를 작성하는 곳입니다."</p>
+                    <span>- 1304 박도연</span>
+                </div>
+                <div class="review">
+                    <p>"간략하게 카페의 소개나"</p>
+                    <span>- 2403 박도연</span>
+                </div>
+                <div class="review">
+                    <p>"고객들의 품평을 작성합니다."</p>
+                    <span>- 3501 박도연</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="hidden">
+        <div class="container">
+            <h2>Location</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="hidden">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="newsletter-form">
+                <input type="email" id="email" placeholder="구독 메일을 발송 받을 이메일을 작성해주세요.">
+                <button type="submit">구독</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="newsletter" class="hidden">
+        <div class="container">
+            <h2>Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" id="email" placeholder="기사를 발송 받을 이메일을 작성해주세요.">
+                <button type="submit">구독</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
